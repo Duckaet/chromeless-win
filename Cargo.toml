@@ -1,0 +1,31 @@
+[package]
+name = "chromeless"
+version = "1.0.0"
+edition = "2024"
+description = "The browser that isn't there — no tabs, no toolbar, no chrome at all."
+authors = ["chromeless"]
+license = "MIT"
+
+[dependencies]
+tao = "0.35"
+wry = "0.55"
+windows = { version = "0.62", features = [
+  "Win32_Foundation",
+  "Win32_Graphics_Dwm",
+  "Win32_Graphics_Gdi",
+  "Win32_Storage_Xps",
+  "Win32_System_DataExchange",
+  "Win32_UI_Shell",
+  "Win32_UI_WindowsAndMessaging",
+]}  
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+image = "0.25"
+
+[lib]
+name = "chromeless_lib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "chromeless"
+path = "src/main.rs"

@@ -3,3 +3,5 @@ Chromeless.icns
 build/
 *.provisionprofile
 .DS_Store
+target/
+Cargo.lock
